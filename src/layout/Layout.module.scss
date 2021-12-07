@@ -1,0 +1,18 @@
+@import "../styles/index.scss";
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+
+  .content {
+    width: 100%;
+    min-height: 400px;
+    background-color: $color-bg-content;
+    position: relative;
+    margin-top: 120px;
+
+  }
+
+}

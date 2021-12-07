@@ -1,0 +1,53 @@
+@import "../../styles/index";
+
+.home {
+  padding: 1rem 5rem;
+
+  .middle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .ad1 {
+    width: 100%;
+    height: 80px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+    }
+  }
+
+  .slideshow {
+    width: 68%;
+
+    .swiper {
+      height: 450px;
+      border-radius: 16px;
+      background-color: lightblue;
+
+    }
+  }
+
+  .left {
+    width: 30%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .payLater {
+      height: 215px;
+      background-color: deepskyblue;
+      border-radius: 16px;
+    }
+
+    .ad2 {
+      height: 215px;
+      background-color: coral;
+      border-radius: 16px;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export const SET_LAPTOPS = 'SET_LAPTOPS';

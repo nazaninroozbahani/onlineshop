@@ -1,0 +1,13 @@
+
+@mixin flexLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inputStyle {
+  height: 50px;
+  background-color: #f0f0f1;
+  border: none;
+  border-radius: 10px;
+}

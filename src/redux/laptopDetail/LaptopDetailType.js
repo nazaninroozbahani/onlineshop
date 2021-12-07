@@ -1,0 +1,1 @@
+export const SET_LAPTOP_DETAIL = 'SET_LAPTOP_DETAIL';

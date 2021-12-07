@@ -1,0 +1,72 @@
+@import "../../styles/index.scss";
+
+.header {
+  height: 80px;
+  align-items: center;
+  padding: 0.25rem 1.5rem;
+  background-color: white;
+  position: fixed;
+  top : 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+
+
+  .search {
+    position: relative;
+    display: flex;
+    flex: 1;
+
+
+    .icon {
+      position: absolute;
+      top: 30%;
+      right: 20px;
+    }
+
+    .input {
+      width: 50%;
+      @include inputStyle;
+      padding-right: 4rem;
+
+      &:focus {
+        background-color: white;
+      }
+    }
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .login {
+    height: 50px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    padding: 0 0.75rem;
+    display: flex;
+    align-items: center;
+    color: $color-darkgray;
+    cursor: pointer;
+    margin-left: 1rem;
+
+    .person {
+      margin-left: 0.5rem;
+    }
+
+  }
+
+  .divider {
+    border-left: 1.5px solid #e0e0e2;
+    height: 24px;
+    margin-left: 1.5rem;
+  }
+
+  .shoppingCart {
+    color: $color-darkgray;
+  }
+
+}

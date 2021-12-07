@@ -1,0 +1,65 @@
+@import "../../styles/index.scss";
+
+.footer {
+  height: 200px;
+  padding: 2rem 6rem 1rem;
+
+  .topBox {
+    display: flex;
+
+    .logoParent {
+      flex: 1;
+
+      .logo {
+        width: 150px;
+      }
+
+    }
+
+    .upBtn {
+      height: 40px;
+      padding: 0.5rem 1rem;
+      background-color: white;
+      border: 1px solid #a1a3a8;
+      border-radius: 8px;
+      color: #a1a3a8;
+      cursor: pointer;
+
+      .arrow {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .infoBox {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+
+    .info {
+      color: #424750;
+      font-size: 0.85rem;
+    }
+
+    .divider {
+      border-left: 1.5px solid #e0e0e2;
+      height: 14px;
+      margin: 0 1.5rem;
+    }
+  }
+
+
+  .copyrightBox {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #e0e0e2;
+
+    .copyright {
+      color: #81858b;
+      font-size: 0.85rem;
+      padding-top: 1rem ;
+    }
+  }
+
+
+}

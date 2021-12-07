@@ -1,0 +1,133 @@
+{
+  "laptops": [
+    {
+      "id": 1,
+      "name": "لپ تاپ 15 اینچی لنوو مدل Ideapad 330 - E",
+      "img": "/images/laptops/l1.png",
+      "price": "8590000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15"
+    },
+    {
+      "id": 2,
+      "name": "لپ تاپ 15.6 اینچی ایسوس مدل VivoBook X540UA - DM527",
+      "img": "/images/laptops/l2.png",
+      "price": "11900000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15.6"
+    },
+    {
+      "id": 3,
+      "name": "لپتاپ 15 اینچی ایسوس مدل TUF FX505DT-HN665",
+      "img": "/images/laptops/l3.png",
+      "price": "24999000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15"
+    },
+    {
+      "id": 4,
+      "name": "لپ تاپ 11 اینچی لنوو مدل IdeaPad 1 - A",
+      "img": "/images/laptops/l4.png",
+      "price": "7250000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "11"
+    },
+    {
+      "id": 5,
+      "name": "لپ تاپ 15.6 اینچی ایسوس مدل VivoBook S533EQ - A",
+      "img": "/images/laptops/l5.png",
+      "price": "30920000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15.6"
+    },
+    {
+      "id": 6,
+      "name": "لپ تاپ 15.6 اینچی ایسوس مدل R565MA-BQ197",
+      "img": "/images/laptops/l6.png",
+      "price": "11000000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15.6"
+    },
+    {
+      "id": 7,
+      "name": "لپ تاپ 17.3 اینچی ام اس آی مدل GE76 raider 11UG",
+      "img": "/images/laptops/l7.png",
+      "price": "99000000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "17.3"
+    },
+    {
+      "id": 8,
+      "name": "لپ تاپ 11.6 اینچی لنوو مدل IdeaPad Slim 1-A",
+      "img": "/images/laptops/l8.png",
+      "price": "8450000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "11.6"
+    },
+    {
+      "id": 9,
+      "name": "لپ تاپ 15.6 اینچی لنوو مدل Legion 7-BC",
+      "img": "/images/laptops/l9.png",
+      "price": "55800000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15.6"
+    },
+    {
+      "id": 10,
+      "name": "لپ تاپ 15.6 اینچی هوآوی مدل MateBook D15 BohrD",
+      "img": "/images/laptops/l10.png",
+      "price": "28200000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15.6"
+    },
+    {
+      "id": 11,
+      "name": "لپ تاپ 13 اینچی مایکروسافت مدل Surface Laptop 3 - E",
+      "img": "/images/laptops/l11.png",
+      "price": "47900000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "13"
+    },
+    {
+      "id": 12,
+      "name": "لپ تاپ 15 اینچی اچ پی مدل 255 G7-C1",
+      "img": "/images/laptops/l12.png",
+      "price": "14980000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15"
+    },
+    {
+      "id": 13,
+      "name": "لپ تاپ 15.6 اینچی ایسوس مدل R565 EP- BQ322",
+      "img": "/images/laptops/l13.png",
+      "price": "23980000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15.6"
+    },
+    {
+      "id": 14,
+      "name": "لپ تاپ 15.6 اینچی ام اس آی مدل MODERN 15 A10M",
+      "img": "/images/laptops/l14.png",
+      "price": "22000000",
+      "RAM" : "4",
+      "intStorage" : "1",
+      "screenSize" : "15.6"
+    }
+
+
+  ]
+
+}

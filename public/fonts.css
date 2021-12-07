@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "iran-yekan";
+  src: url("/fonts/iran-yekan/woff/IRANYekanMedium.woff") format("woff"),
+    url("/fonts/iran-yekan/woff2/IRANYekanMedium.woff2") format("woff2"),
+    url("/fonts/iran-yekan/ttf/IRANYekanMedium.ttf") format("true-type");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "iran-yekan";
+  src: url("/fonts/iran-yekan/woff/IRANYekanExtraBlack.woff") format("woff"),
+    url("/fonts/iran-yekan/woff2/IRANYekanExtraBlack.woff2") format("woff2"),
+    url("/fonts/iran-yekan/ttf/IRANYekanExtraBlack.ttf") format("true-type");
+  font-weight: bold;
+  font-display: swap;
+}

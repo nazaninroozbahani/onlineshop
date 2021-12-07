@@ -1,0 +1,52 @@
+@import "../../styles/index";
+
+.nav {
+  height: 40px;
+  padding: 0 1.5rem;
+  background-color: white;
+  margin-top: 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+
+
+  ul {
+    height: 40px;
+    display: flex;
+
+    li {
+      height: 38px;
+      cursor: pointer;
+      list-style-type: none;
+      padding: 0 1rem;
+      @include flexLayout();
+
+      &:hover {
+        border-bottom: 2px solid rgb(239, 86, 97);
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 0.85rem;
+        @include flexLayout();
+
+        .icons {
+          color: #a1a3a8;
+          font-size: 1rem;
+          margin-left: 0.25rem;
+        }
+      }
+
+      .active {
+
+      }
+    }
+  }
+
+
+}
