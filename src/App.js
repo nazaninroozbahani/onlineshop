@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import "./styles/index.scss"
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import ScrollToTop from "./common/ScrollToTop";
 import Layout from "./layout/Layout";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import Home from "./pages/home/Home";
+import Cart from "./pages/cart/Cart";
 import Product from "./pages/product/Product";
 import Products from "./pages/products/Products";
-import ScrollToTop from "./common/ScrollToTop";
-import Cart from "./pages/cart/Cart";
+import "./styles/index.scss";
+
 
 
 const App = () => {
@@ -19,16 +19,19 @@ const App = () => {
             <Layout>
                 <ScrollToTop>
                     <Switch>
-                        <Route exact path={"/"} component={Home}/>
+                        <Route exact path={"/"}>
+                            <Redirect to="/laptops" />
+                        </Route>
+                        {/* <Route exact path={"/"} component={Home} /> */}
                         <Route exact path={"/laptops"}
-                               render={() => <Products
-                                   currentPage={currentPage}
-                                   setCurrentPage={setCurrentPage}
-                                   pageOffset={pageOffset}
-                                   setPageOffset={setPageOffset}
-                               />}/>
-                        <Route exact path={"/product/:id"} component={Product}/>
-                        <Route exact path={"/cart"} component={Cart}/>
+                            render={() => <Products
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                                pageOffset={pageOffset}
+                                setPageOffset={setPageOffset}
+                            />} />
+                        <Route exact path={"/product/:id"} component={Product} />
+                        <Route exact path={"/cart"} component={Cart} />
                         {/*<Route component={P404}/>*/}
                     </Switch>
                 </ScrollToTop>

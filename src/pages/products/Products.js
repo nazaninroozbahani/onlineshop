@@ -101,7 +101,7 @@ const Products = ({currentPage, setCurrentPage, pageOffset, setPageOffset}) => {
             {
                 !isLoading ?
                     <>
-                        <Sidebar/>
+                        {/* <Sidebar/> */}
                         <div className={styles.main}>
                             <Top/>
                             <div className={styles.result}>
