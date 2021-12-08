@@ -5,12 +5,14 @@ import {numberWithCommas} from "../../../common/CommonFunctions";
 import {useDispatch, useSelector} from "react-redux";
 import {decreaseCount, deleteFromCart, increaseCount} from "../../../redux/cart/CartAction";
 import QuantitySelector from "./QuantitySelector";
+import {useHistory} from "react-router-dom";
 
 const CartItem = ({item}) => {
 
     const dispatch = useDispatch();
     const cartList = useSelector(state => state.cart.cartList);
 
+    const history = useHistory();
 
     const handlePlus = () => {
         dispatch(increaseCount(item.id));
@@ -24,10 +26,14 @@ const CartItem = ({item}) => {
         dispatch(deleteFromCart(item.id));
     };
 
+    const goToProduct = () => {
+        history.push(`/product/${item.id}`);
+    };
+
     return (
         <div className={`p-3 d-flex flex-row ${styles.cartItem}`}>
             <div className="px-4">
-                <img src={item.img}/>
+                <img src={item.img} style={{cursor: 'pointer'}} onClick={goToProduct}/>
             </div>
             <div className="px-4 flex-fill">
                 <p className={styles.title}>{item.name}</p>
