@@ -1,4 +1,5 @@
-import {combineReducers, createStore} from "redux";
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import thunk from 'redux-thunk'
 import LaptopsReducer from "./laptops/LaptopsReducer";
 import LaptopDetailReducer from "./laptopDetail/LaptopDetailReducer";
 import CartReducer from "./cart/CartReducer";
@@ -21,5 +22,5 @@ const persistedReducer = persistReducer(persistConfig, reducer);
 
 // const Store = createStore (reducer);
 
-export const store = createStore(persistedReducer)
+export const store = createStore(persistedReducer, applyMiddleware(thunk))
 export const persistor = persistStore(store)

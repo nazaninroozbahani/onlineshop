@@ -1,9 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import Sidebar from "./sidebar/Sidebar";
 import styles from "./Products.module.scss"
-import {useDispatch, useSelector} from "react-redux";
-import {loadLaptopsFromJsonServer} from "../../api/api-laptop";
-import {setLaptops} from "../../redux/laptops/LaptopsAction";
+import {useSelector} from "react-redux";
 import {DotLoader} from "react-spinners";
 import Top from "./Top";
 import Sort from "./Sort";
@@ -13,15 +10,14 @@ import ProductBox from "./ProductBox";
 
 const PER_PAGE = 12;
 
-const Products = ({currentPage, setCurrentPage, pageOffset, setPageOffset}) => {
+const Products = ({currentPage, setCurrentPage}) => {
 
     const [laptopList, setLaptopList] = useState([]);
 
     const laptops = useSelector(state => state.laptops.laptops);
+    const isLoading = useSelector(state => state.laptops.isLoading);
 
     const [sortParam, setSortParam] = useState(0);
-
-    const [isLoading, setIsLoading] = useState(true);
 
 
     const handlePageClick = ({selected: selectedPage}) => {
@@ -54,47 +50,6 @@ const Products = ({currentPage, setCurrentPage, pageOffset, setPageOffset}) => {
         }
     }, [sortParam])
 
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        loadLaptopsFromJsonServer((isOk, data) => {
-            if (!isOk)
-                return alert("ناموفق در گرفتن لیست لپ تاپ ها");
-            dispatch(setLaptops(data));
-            setIsLoading(false);
-        })
-    }, []);
-
-
-    // useEffect(() => {
-    //     // window.scrollTo({
-    //     //     top: pageOffset,
-    //     //     behavior: "smooth"
-    //     // });
-    //     window.scrollY = pageOffset
-    // }, [pageOffset]);
-    //
-    //
-    // useEffect(() => {
-    //     window.addEventListener('scroll', listenToScroll);
-    //     return () => {
-    //         window.removeEventListener('scroll', listenToScroll)
-    //     }
-    // }, []);
-    //
-    //
-    // const listenToScroll = () => {
-    //     const winScroll =
-    //         document.body.scrollTop || document.documentElement.scrollTop
-    //
-    //     const height =
-    //         document.documentElement.scrollHeight -
-    //         document.documentElement.clientHeight
-    //
-    //     const scrolled = winScroll / height
-    //
-    //     setPageOffset(scrolled);
-    // }
 
     return (
         <div className={styles.products}>

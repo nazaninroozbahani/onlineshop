@@ -1,8 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {FaRegUser} from "react-icons/all";
 import styles from "./Header.module.scss";
-import {FiShoppingCart} from "react-icons/all";
-import {Link} from "react-router-dom";
 
 
 const Login = () => {

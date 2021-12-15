@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./../Cart.module.scss";
-import {AiOutlineMinus, AiOutlinePlus, MdDelete, MdEventAvailable, MdVerifiedUser} from "react-icons/all";
+import {MdDelete, MdEventAvailable, MdVerifiedUser} from "react-icons/all";
 import {numberWithCommas} from "../../../common/CommonFunctions";
 import {useDispatch, useSelector} from "react-redux";
 import {decreaseCount, deleteFromCart, increaseCount} from "../../../redux/cart/CartAction";

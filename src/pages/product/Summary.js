@@ -1,11 +1,10 @@
 import React from 'react';
 import styles from "./Product.module.scss"
 import {MdEventAvailable, MdVerifiedUser} from "react-icons/all";
-import {numberWithCommas} from "../../common/CommonFunctions";
 import {useDispatch, useSelector} from "react-redux";
 import {addToCart, increaseCount} from "../../redux/cart/CartAction";
 import {useHistory} from "react-router-dom";
-import CartReducer from "../../redux/cart/CartReducer";
+import {numberWithCommas} from "../../common/CommonFunctions";
 
 const Summary = ({laptop}) => {
 
@@ -43,8 +42,8 @@ const Summary = ({laptop}) => {
                 <p className={styles.number}>
                     {
                         laptop &&
-                        // numberWithCommas(laptop.price)
-                        laptop.price
+                        numberWithCommas(laptop.price)
+                        // laptop.price
                     }
                 </p>
                 <span className={styles.toman}>تومان</span>

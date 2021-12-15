@@ -1,7 +1,5 @@
 import React from 'react';
-import {useSelector} from "react-redux";
 import styles from "./Product.module.scss"
-import {MoonLoader} from "react-spinners";
 
 const Info = ({laptop}) => {
 

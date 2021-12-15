@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from "../products/Products.module.scss";
 
 const PHeader = () => {
     return (

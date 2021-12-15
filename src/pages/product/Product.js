@@ -5,14 +5,15 @@ import Info from "./Info";
 import Summary from "./Summary";
 import {loadLaptopDetailFromJsonServer} from "../../api/api-laptop";
 import {MoonLoader} from "react-spinners";
+import Comments from "./Comments";
 
 const Product = (props) => {
 
     const id = props.match.params.id;
 
-    const [laptop, setLaptop] = useState({});
+    const [laptop, setLaptop] = useState();
 
-    let [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
@@ -29,18 +30,19 @@ const Product = (props) => {
     return (
         <div className={styles.root}>
             {
-                !isLoading ?
+                (!isLoading && id && laptop) ?
                     <div>
                         <PHeader/>
                         <div className={styles.pData}>
                             <div className={styles.pImage}>
-                                <img src={laptop.img} className={styles.mainImage}/>
+                                <img src={laptop.img} className={styles.mainImage} alt={laptop.name}/>
                             </div>
                             <div className={styles.info}>
                                 <Info laptop={laptop}/>
                             </div>
                             <Summary laptop={laptop}/>
                         </div>
+                        {/*<Comments id={id}/>*/}
                     </div> :
                     <div className={styles.loadingParent}>
                         <MoonLoader color={"blue"} loading={isLoading} size={50}/>

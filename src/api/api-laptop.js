@@ -1,7 +1,7 @@
 import {getAxiosInstanceJsonServer} from "./api";
 
 export const loadLaptopsFromJsonServer = (callback) => {
-    getAxiosInstanceJsonServer().get("laptops")
+    getAxiosInstanceJsonServer().get("onlineshopFakeData/laptops")
         .then(response => {
             const data = response.data;
             callback(true, data)
@@ -12,7 +12,18 @@ export const loadLaptopsFromJsonServer = (callback) => {
 }
 
 export const loadLaptopDetailFromJsonServer = (id,callback) => {
-    getAxiosInstanceJsonServer().get(`laptops/${id}`)
+    getAxiosInstanceJsonServer().get(`onlineshopFakeData/laptops/${id}`)
+        .then(response => {
+            const data = response.data;
+            callback(true, data)
+        })
+        .catch(error => {
+            callback(false, error)
+        });
+}
+
+export const loadCommentsFromJsonServer = (id,callback) => {
+    getAxiosInstanceJsonServer().get(`onlineshopFakeComments/comments/${id}`)
         .then(response => {
             const data = response.data;
             callback(true, data)
