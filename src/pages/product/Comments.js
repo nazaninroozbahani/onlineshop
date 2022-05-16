@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import styles from "./Product.module.scss"
-import {BiCommentDetail} from "react-icons/all";
 import {loadCommentsFromJsonServer} from "../../api/api-laptop";
 import ContentLoader from "react-content-loader";
 import NewComment from "./NewComment";
+import { BiCommentDetail } from 'react-icons/bi';
 
 
 const Comments = ({id}) => {

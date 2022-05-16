@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Navbar.module.scss'
 import {NavLink} from "react-router-dom";
-import {AiOutlineLaptop} from "react-icons/all";
+import { AiOutlineLaptop } from 'react-icons/ai';
 
 const Navbar = () => {
 

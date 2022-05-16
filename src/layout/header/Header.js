@@ -1,16 +1,16 @@
-import React from 'react';
-import Logo from "./Logo";
-import Search from "./Search";
-import Login from "./Login";
-import styles from "./Header.module.scss"
 import CartIcon from "./CartIcon";
+import Login from "./Login";
+import Logo from "./Logo";
+import React from 'react';
+import Searchhh from "./HeaderSearch";
+import styles from "./Header.module.scss"
 
 const Header = () => {
 
     return (
         <div className={styles.header}>
             <Logo/>
-            <Search/>
+            <Searchhh/>
             <Login/>
             <CartIcon />
         </div>

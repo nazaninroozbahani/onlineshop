@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "../Cart.module.scss";
-import {BiLogIn} from "react-icons/all";
 import {Link} from "react-router-dom";
+import { BiLogIn } from 'react-icons/bi';
 
 const AsideBar = () => {
     return (

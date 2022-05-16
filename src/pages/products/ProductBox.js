@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from "./Products.module.scss"
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {numberWithCommas} from "../../common/CommonFunctions";
 
 
 const ProductBox = (props) => {
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const handleClick = () => {
-         history.push(`/product/${props.item.id}`);
+         navigate(`/product/${props.item.id}`);
     }
 
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
+import { IoIosArrowUp } from 'react-icons/io';
 import styles from "./Footer.module.scss"
-import {IoIosArrowUp} from "react-icons/all";
 
 
 const Footer = () => {

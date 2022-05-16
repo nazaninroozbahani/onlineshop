@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from "./Product.module.scss"
-import {MdEventAvailable, MdVerifiedUser} from "react-icons/all";
 import {useDispatch, useSelector} from "react-redux";
 import {addToCart, increaseCount} from "../../redux/cart/CartAction";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {numberWithCommas} from "../../common/CommonFunctions";
+import { MdEventAvailable, MdVerifiedUser } from 'react-icons/md';
 
 const Summary = ({laptop}) => {
 
@@ -12,7 +12,7 @@ const Summary = ({laptop}) => {
 
     const cartList = useSelector(state => state.cart.cartList);
 
-    const history = useHistory();
+    const history = useNavigate();
 
     const handleAddToCart = () => {
         const index = cartList.findIndex(c => c.id === laptop.id);

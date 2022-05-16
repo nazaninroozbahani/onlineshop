@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
+
+import {DotLoader} from "react-spinners";
+import Pagination from "./Pagination";
+import ProductBoxxx from "./ProductBox";
+import Sort from "./Sort";
+import Top from "./Top";
 import styles from "./Products.module.scss"
 import {useSelector} from "react-redux";
-import {DotLoader} from "react-spinners";
-import Top from "./Top";
-import Sort from "./Sort";
-import Pagination from "./Pagination";
-import ProductBox from "./ProductBox";
-
 
 const PER_PAGE = 12;
 
@@ -27,6 +27,7 @@ const Products = ({currentPage, setCurrentPage}) => {
             behavior: "smooth"
         });
     }
+    
 
     const offset = currentPage * PER_PAGE;
 
@@ -52,41 +53,44 @@ const Products = ({currentPage, setCurrentPage}) => {
 
 
     return (
-        <div className={styles.products}>
-            {
-                !isLoading ?
-                    <>
-                        {/* <Sidebar/> */}
-                        <div className={styles.main}>
-                            <Top/>
-                            <div className={styles.result}>
-                                {
-                                    !isLoading &&
-                                    <>
-                                        <Sort sortParam={sortParam} setSortParam={setSortParam}
-                                              setCurrentPage={setCurrentPage}/>
-                                        <div className={styles.list}>
-                                            {
-                                                laptopList.length > 0 &&
-                                                laptopList
-                                                    .slice(offset, offset + PER_PAGE)
-                                                    .map(item => <ProductBox key={item.id} item={item}/>)
-                                            }
-                                        </div>
-                                        <Pagination pageCount={pageCount} onPageChange={handlePageClick}
-                                                    activePage={currentPage}/>
-                                    </>
-                                }
-                            </div>
-                        </div>
-                    </>
-
-                    :
-                    <div className={styles.loadingParent}>
-                        <DotLoader color={"blue"} loading={isLoading} size={80}/>
+      <div className={styles.products}>
+        {!isLoading ? (
+          <>
+            {/* <Sidebar/> */}
+            <div className={styles.main}>
+              <Top />
+              <div className={styles.result}>
+                {!isLoading && (
+                  <>
+                    <Sort
+                      sortParam={sortParam}
+                      setSortParam={setSortParam}
+                      setCurrentPage={setCurrentPage}
+                    />
+                    <div className={styles.list}>
+                      {laptopList.length > 0 &&
+                        laptopList
+                          .slice(offset, offset + PER_PAGE)
+                          .map((item) => (
+                            <ProductBoxxx key={item.id} item={item} />
+                          ))}
                     </div>
-            }
-        </div>
+                    <Pagination
+                      pageCount={pageCount}
+                      onPageChange={handlePageClick}
+                      activePage={currentPage}
+                    />
+                  </>
+                )}
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className={styles.loadingParent}>
+            <DotLoader color={"blue"} loading={isLoading} size={80} />
+          </div>
+        )}
+      </div>
     );
 };
 

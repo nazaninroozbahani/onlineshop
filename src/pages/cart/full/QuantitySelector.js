@@ -1,6 +1,6 @@
 import React from 'react';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import styles from "../Cart.module.scss";
-import {AiOutlineMinus, AiOutlinePlus} from "react-icons/all";
 
 const QuantitySelector = ({onDecrease, onIncrease, count}) => {
 

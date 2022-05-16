@@ -1,9 +1,9 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styles from "./Header.module.scss";
-import {BsArrowUpRight, BsSearch} from "react-icons/all";
 import {useDispatch, useSelector} from "react-redux";
 import {getAllLaptops} from "../../redux/laptops/LaptopsAction";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import { BsArrowUpRight, BsSearch } from 'react-icons/bs';
 
 
 const Search = () => {
@@ -16,7 +16,7 @@ const Search = () => {
 
     const dispatch = useDispatch();
 
-    const history = useHistory();
+    const history = useNavigate();
 
     const inputRef = useRef();
 

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styles from "./Product.module.scss"
-import {BiCommentAdd} from "react-icons/all";
 import axios from "axios";
+import { BiCommentAdd } from 'react-icons/bi';
 
 
 const NewComment = ({id, comments}) => {

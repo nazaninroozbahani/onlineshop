@@ -1,6 +1,6 @@
 import React from 'react';
+import { MdSort } from 'react-icons/md';
 import styles from "./Products.module.scss";
-import {MdSort} from "react-icons/all";
 
 const Sort = (props) => {
 

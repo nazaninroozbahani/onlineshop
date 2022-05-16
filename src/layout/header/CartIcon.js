@@ -1,8 +1,8 @@
 import React from 'react';
-import {FiShoppingCart} from "react-icons/all";
 import styles from "./Header.module.scss";
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
+import { FiShoppingCart } from 'react-icons/fi';
 
 const CartIcon = () => {
 

@@ -1,44 +1,62 @@
-import React, {useState} from 'react';
-import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
-import ScrollToTop from "./common/ScrollToTop";
-import Layout from "./layout/Layout";
-import Cart from "./pages/cart/Cart";
-import Product from "./pages/product/Product";
-import Products from "./pages/products/Products";
 import "./styles/index.scss";
 
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+
+import About from "./pages/About";
+import AboutClass from "./pages/Aboutclass";
+import Cart from "./pages/cart/Cart";
+import Layout from "./layout/Layout";
+import Product from "./pages/product/Product";
+import Products from "./pages/products/Products";
+import ScrollToTop from "./common/ScrollToTop";
+
+import ReactGA from "react-ga";
+const TRACKING_ID = "UA-228762518-1"; 
+ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const [pageOffset, setPageOffset] = useState(0);
 
-    const [currentPage, setCurrentPage] = useState(0);
-    const [pageOffset, setPageOffset] = useState(0);
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
-    return (
-        <BrowserRouter>
-            <Layout>
-                <ScrollToTop>
-                    <Switch>
-                        <Route exact path={"/"}>
-                            <Redirect to="/laptops" />
-                        </Route>
-                        {/* <Route exact path={"/"} component={Home} /> */}
-                        <Route exact path={"/laptops"}
-                            render={() => <Products
-                                currentPage={currentPage}
-                                setCurrentPage={setCurrentPage}
-                                pageOffset={pageOffset}
-                                setPageOffset={setPageOffset}
-                            />} />
-                        <Route exact path={"/product/:id"}
-                               render={(props) =>
-                                   <Product key={props.match.params.id} {...props}/>} />
-                        <Route exact path={"/cart"} component={Cart} />
-                        {/*<Route component={P404}/>*/}
-                    </Switch>
-                </ScrollToTop>
-            </Layout>
-        </BrowserRouter>
-    );
+
+  return (
+    <BrowserRouter>
+      <Layout>
+        <ScrollToTop>
+          <Routes>
+            <Route
+              exact
+              path={"/"}
+              element={<Navigate to="/laptops" />}
+            ></Route>
+            {/* <Route exact path={"/"} element={<Home/>} /> */}
+            <Route
+              exact
+              path={"/laptops"}
+              element={
+                <Products
+                  currentPage={currentPage}
+                  setCurrentPage={setCurrentPage}
+                  pageOffset={pageOffset}
+                  setPageOffset={setPageOffset}
+                />
+              }
+            />
+            <Route exact path={"/product/:id"} element={<Product />} />
+            <Route exact path={"/cart"} element={<Cart />} />
+            <Route exact path={"/about"} element={<About />} />
+            <Route exact path={"/aboutclass"} element={<AboutClass />} />
+            {/*<Route element={<P404/>}/>*/}
+          </Routes>
+        </ScrollToTop>
+      </Layout>
+    </BrowserRouter>
+  );
 };
 
 export default App;

@@ -1,18 +1,18 @@
 import React from 'react';
 import styles from "./../Cart.module.scss";
-import {MdDelete, MdEventAvailable, MdVerifiedUser} from "react-icons/all";
 import {numberWithCommas} from "../../../common/CommonFunctions";
 import {useDispatch, useSelector} from "react-redux";
 import {decreaseCount, deleteFromCart, increaseCount} from "../../../redux/cart/CartAction";
 import QuantitySelector from "./QuantitySelector";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import { MdDelete, MdEventAvailable, MdVerifiedUser } from 'react-icons/md';
 
 const CartItem = ({item}) => {
 
     const dispatch = useDispatch();
     const cartList = useSelector(state => state.cart.cartList);
 
-    const history = useHistory();
+    const history = useNavigate();
 
     const handlePlus = () => {
         dispatch(increaseCount(item.id));

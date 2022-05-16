@@ -6,10 +6,13 @@ import Summary from "./Summary";
 import {loadLaptopDetailFromJsonServer} from "../../api/api-laptop";
 import {MoonLoader} from "react-spinners";
 import Comments from "./Comments";
+import { useParams } from 'react-router-dom';
 
 const Product = (props) => {
 
-    const id = props.match.params.id;
+    const params = useParams();
+
+    const id = params.id;
 
     const [laptop, setLaptop] = useState();
 
