@@ -14,10 +14,7 @@ import TagManager from "react-gtm-module";
 import RouteChangeTracker from "./utils/RouteChangeTracker";
 
 const tagManagerArgs = {
-  gtmId: "UA-228762518-1",
-  events: {
-    sendUserInfo: "userInfo",
-  },
+  gtmId: "GTM-KM9F7NP",
 };
 
 TagManager.initialize(tagManagerArgs);
