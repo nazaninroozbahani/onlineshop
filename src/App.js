@@ -12,6 +12,7 @@ import Products from "./pages/products/Products";
 import ScrollToTop from "./common/ScrollToTop";
 
 import ReactGA from "react-ga";
+import RouteChangeTracker from "./utils/RouteChangeTracker";
 const TRACKING_ID = "UA-228762518-1"; 
 ReactGA.initialize(TRACKING_ID);
 
@@ -26,6 +27,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <RouteChangeTracker />
       <Layout>
         <ScrollToTop>
           <Routes>
