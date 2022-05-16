@@ -10,20 +10,21 @@ import Layout from "./layout/Layout";
 import Product from "./pages/product/Product";
 import Products from "./pages/products/Products";
 import ScrollToTop from "./common/ScrollToTop";
-
-import ReactGA from "react-ga";
+import TagManager from "react-gtm-module";
 import RouteChangeTracker from "./utils/RouteChangeTracker";
-const TRACKING_ID = "UA-228762518-1"; 
-ReactGA.initialize(TRACKING_ID);
+
+const tagManagerArgs = {
+  gtmId: "UA-228762518-1",
+  events: {
+    sendUserInfo: "userInfo",
+  },
+};
+
+TagManager.initialize(tagManagerArgs);
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [pageOffset, setPageOffset] = useState(0);
-
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
 
   return (
     <BrowserRouter>
