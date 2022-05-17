@@ -1,23 +1,14 @@
-import "./styles/index.scss";
-
+import React, { useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import React, { useEffect, useState } from "react";
-
+import ScrollToTop from "./common/ScrollToTop";
+import Layout from "./layout/Layout";
 import About from "./pages/About";
 import AboutClass from "./pages/Aboutclass";
 import Cart from "./pages/cart/Cart";
-import Layout from "./layout/Layout";
 import Product from "./pages/product/Product";
 import Products from "./pages/products/Products";
-import ScrollToTop from "./common/ScrollToTop";
-import TagManager from "react-gtm-module";
+import "./styles/index.scss";
 import RouteChangeTracker from "./utils/RouteChangeTracker";
-
-const tagManagerArgs = {
-  gtmId: "GTM-KM9F7NP",
-};
-
-TagManager.initialize(tagManagerArgs);
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(0);
