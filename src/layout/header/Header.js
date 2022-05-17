@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import React from 'react';
 import Searchhh from "./HeaderSearch";
 import styles from "./Header.module.scss"
+import Ads from "./Ads";
 
 const Header = () => {
 
@@ -11,6 +12,7 @@ const Header = () => {
         <div className={styles.header}>
             <Logo/>
             <Searchhh/>
+            <Ads />
             <Login/>
             <CartIcon />
         </div>
