@@ -6,7 +6,7 @@ const RouteChangeTracker = () => {
   const navigation = useContext(UNSAFE_NavigationContext).navigator;
 
   navigation.listen((locationListener, action) => {
-    console.log("listen: ", locationListener.location);
+    // console.log("listen: ", locationListener.location);
     // ReactGA.set({ page: locationListener.location.pathname });
     // ReactGA.pageview(locationListener.location.pathname);
   });
