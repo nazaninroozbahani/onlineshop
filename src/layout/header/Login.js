@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 
-import LoginModal from "./LoginModal";
 import styles from "./Header.module.scss";
 import { FaRegUser } from "react-icons/fa";
 
 const Login = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClick = () => {
-    setShow(true);
-  };
-
+ 
   return (
     <>
-      <button className={styles.login} onClick={handleClick}>
+      <button className={styles.login}>
         <FaRegUser className={styles.person} size="1.5rem" />
         ورود یا ثبت نام
       </button>
