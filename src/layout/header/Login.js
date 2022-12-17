@@ -12,7 +12,6 @@ const Login = () => {
         ورود یا ثبت نام
       </button>
       <div className={styles.divider} />
-      <LoginModal show={show} setShow={setShow} />
     </>
   );
 };
