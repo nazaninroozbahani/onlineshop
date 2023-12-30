@@ -12,7 +12,7 @@ const Sort = (props) => {
     return (
         <div className={styles.sort}>
             <MdSort className={styles.sortIcon} />
-            <p>مرتب سازی بر اااااااااااااساس : </p>
+            <p>مرتب سازی بر ااااااااااااااااساس : </p>
             <ul>
                 <li onClick={() => handleClick(0)}><span className={props.sortParam === 0 ? styles.selected : ''}>پیش فرض</span></li>
                 <li onClick={() => handleClick(1)}><span className={props.sortParam === 1 ? styles.selected: ''} >گران ترین</span></li>
